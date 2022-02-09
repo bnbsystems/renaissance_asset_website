@@ -1,91 +1,91 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
-  <a href="https://gatsby-starter-krisp.netlify.com/">
-    <img alt="Gatsby" src="https://user-images.githubusercontent.com/21126965/61477411-cc62b200-a9ac-11e9-9f54-be17395992b0.png" width = "150" />
+  <a href="https://www.lekoarts.de/en">
+    <img alt="LekoArts" src="https://img.lekoarts.de/gatsby/lekoarts-monogram-v2.svg" width="100" />
   </a>
-  <br/>
-  A Minimal, Clean, Responsive Starter built with Gatsby
+</p>
+<h1 align="center">
+  Free & Open Source Gatsby Themes by LekoArts
+</h1>
+
+<p align="center">
+  <a href="https://github.com/LekoArts/gatsby-themes/blob/main/LICENSE">
+    <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="@lekoarts/gatsby-themes is released under the MIT license." />
+  </a>
+  <a href="https://npmcharts.com/compare/@lekoarts/gatsby-theme-minimal-blog,@lekoarts/gatsby-theme-cara,@lekoarts/gatsby-theme-emma,@lekoarts/gatsby-theme-emilia,@lekoarts/gatsby-theme-styleguide,@lekoarts/gatsby-theme-status-dashboard,@lekoarts/gatsby-theme-specimens,@lekoarts/gatsby-theme-graphql-playground,@lekoarts/gatsby-theme-jodie?interval=30&minimal=true">
+    <img src="https://img.shields.io/badge/-npmcharts-red" alt="npmcharts.com Overview" />
+  </a>
+  <a href="https://circleci.com/gh/LekoArts/gatsby-themes">
+    <img src="https://circleci.com/gh/LekoArts/gatsby-themes.svg?style=svg" alt="CircleCI Status" />
+  </a>
+  <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs welcome!" />
+  <a href="https://twitter.com/intent/follow?screen_name=lekoarts_de">
+    <img src="https://img.shields.io/twitter/follow/lekoarts_de.svg?label=Follow%20@lekoarts_de" alt="Follow @lekoarts_de" />
+  </a>
 </p>
 
+Get **high-quality** and **customizable** Gatsby themes to quickly bootstrap your website! Choose from many professionally created and impressive designs with a wide variety of features and customization options. Use Gatsby Themes to take your project to the next level and let you and your customers take advantage of the many benefits Gatsby has to offer.
 
-## 🚀 Quick start
+## 🎨 Themes Overview
 
-1.  **Create a Gatsby site.**
+[![Themes Preview Banner](https://img.lekoarts.de/gatsby/thin_banner.jpg)](https://themes.lekoarts.de)
 
-    Use the Gatsby CLI to create a new site, specifying the default starter.
+## 💼 Contents
 
-    ```sh
-    gatsby new your-site-name https://github.com/mohanmonu777/gatsby-starter-krisp.git
-    ```
+This repository is a collection of my Gatsby themes, managed as a [monorepo](https://trunkbaseddevelopment.com/monorepos/) with [Lerna](https://github.com/lerna/lerna) and [yarn workspaces](https://yarnpkg.com/lang/en/docs/workspaces/).
 
-1.  **Start developing.**
+- `.circleci`: Contains the configuration file for CircleCI
+- `.github`: GitHub actions, templates for issues, and FUNDING file. A GitHub action will publish the `/examples` as starters to individual GitHub repositories.
+- `cypress`: Contains the Cypress tests for `examples`
+- `examples`: Contains the corresponding example sites for the `themes`. These projects can and should be used as a starter and will be copied over to their own repository. Hence they contain example data and additional Gatsby plugins (e.g. `gatsby-plugin-manifest` and `gatsby-plugin-offline`). The folder names are the contents after `gatsby-theme-*`
+- `jest`: Primarily files for mocking functions/files in Jest tests
+- `plop-templates`: Template for [plop.js](https://plopjs.com/)
+- `scripts`: In order to run the tests on CircleCI some utility bash scripts are needed which are located here
+- `themes`: Contains the themes themselves. They should only have the bare minimum of plugins installed (as `examples` can expand them) and also use `Theme UI` for styling. The naming of the folders must be `gatsby-theme-[name-with-dashes]` and the package name under the scope of `@lekoarts`
+- `www`: Contains the source code for [themes.lekoarts.de](http://themes.lekoarts.de)
 
-    Navigate into your new site’s directory and start it up.
+## 🤝 How to Contribute
 
-    ```sh
-    cd my-default-starter/
-    gatsby develop
-    ```
+Make sure that you have `yarn` installed on your machine (as it's mandatory for `yarn workspaces`). Fork this repository, clone it and run `yarn` in the root directory.
 
-1.  **Open the source code and start editing!**
+To launch the development server of an example site, use:
 
-    Your site is now running at `http://localhost:8000`!
+```sh
+yarn workspace [examples/name] develop
+```
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+Or for a build:
 
-    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+```sh
+yarn workspace [examples/name] build
+```
 
-## 🧐 What's inside?
+In the case of `examples/emma` this command would be `yarn workspace emma develop`. Now you can make changes to the respective theme and see them via Hot-Reloading.
 
-A quick look at the top-level files and directories you'll see in a Gatsby project.
+Commit your changes to a feature branch of your fork and open up a PR against this repository. The PR will have checks in place (unit and end-to-end tests) which you can also run on your machine in preparation for the PR.
 
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    └── README.md
+Have a look at the [contributing guide](CONTRIBUTING.md) to learn more.
 
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
+## 🤩 Support Me
 
-2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
+Thanks for using this project! I'm always interested in seeing what people do with my projects, so don't hesitate to tag me on [Twitter](https://twitter.com/lekoarts_de) and share the project with me.
 
-3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
+Please star this project, share it on Social Media or consider supporting me on [Patreon](https://www.patreon.com/lekoarts) or [GitHub Sponsor](https://github.com/sponsors/LekoArts)!
 
-4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
+## 🎓 Learning Gatsby Themes
 
-5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.org/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
+### Articles from lekoarts.de
 
-6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.org/docs/gatsby-config/) for more detail).
+- [How I used Theme UI to build my Gatsby Themes library](https://www.lekoarts.de/javascript/how-i-used-theme-ui-to-seamlessly-convert-design-to-code?utm_source=gatsby-themes&utm_medium=README)
+- [Setting up a Gatsby Themes workspace with TypeScript, ESLint & Cypress](https://www.lekoarts.de/javascript/setting-up-a-yarn-workspace-with-typescript-eslint-and-cypress?utm_source=gatsby-themes&utm_medium=README)
+- [Specimens for Gatsby powered Design Systems](https://www.lekoarts.de/garden/specimens-for-gatsby-powered-design-systems?utm_source=gatsby-themes&utm_medium=README)
+- [Creating your own Status Dashboard with Gatsby](https://www.lekoarts.de/garden/creating-your-own-status-dashboard-with-gatsby?utm_source=gatsby-themes&utm_medium=README)
 
-7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.org/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
+### Official resources
 
-8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.org/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
+- [Gatsbyjs.com - Gatsby Themes](https://www.gatsbyjs.com/docs/themes/)
+- [Building a Theme](https://www.gatsbyjs.com/tutorial/building-a-theme/)
+- [Free egghead.io "Gatsby Theme Authoring" course](https://egghead.io/courses/gatsby-theme-authoring)
 
-9.  **`LICENSE`**: Gatsby is licensed under the MIT license.
+### Paid resources
 
-10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
-
-11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
-
-12. **`README.md`**: A text file containing useful reference information about your project.
-
-## 🎓 Learning Gatsby
-
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
-
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
-
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
-
-## 💫 Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
-
+- [Composable Gatsby Themes](https://egghead.io/courses/composable-gatsby-themes)
