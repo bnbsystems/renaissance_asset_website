@@ -2,6 +2,7 @@
   "private": true,
   "name": "@lekoarts/gatsby-themes",
   "description": "My open-source collection of free Gatsby themes",
+  "homepage": "https://bnbsystems.github.io/renaissance_asset_website",
   "author": "LekoArts <hello@lekoarts.de>",
   "workspaces": [
     "themes/*",
