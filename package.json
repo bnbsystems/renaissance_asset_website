@@ -9,6 +9,7 @@
     "examples/*"
   ],
   "scripts": {
+    "deploy": "yarn workspace emma build --prefix-paths && gh-pages -d examples/emma/public",
     "tsc": "tsc",
     "typecheck": "tsc --noEmit",
     "typecheck:ci": "tsc -p tsconfig.ci.json --noEmit",
