@@ -31,7 +31,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Download Cypress artifacts
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: cypress
           path: cypress/e2e/build
